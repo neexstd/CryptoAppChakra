@@ -27,12 +27,12 @@ const News = () => {
 
   return (
     <>
-      <Heading px={20} pt={10}>
+      <Heading px={{ base: 2, md: 10, lg: 20 }} pt={10}>
         Latest News in Cryptoworld
       </Heading>
       <SimpleGrid
         columns={{ "2xl": 4, xl: 3, lg: 2, base: 1 }}
-        px={20}
+        px={{ base: 2, md: 10, lg: 20 }}
         gap="7"
         py="10"
         position="relative"

@@ -29,10 +29,15 @@ const Homepage: React.FC = () => {
 
   return (
     <div>
-      <Heading px={20} mt={5}>
+      <Heading px={{ base: 2, md: 10, lg: 20 }} mt={5}>
         Global Crypto Stats
       </Heading>
-      <SimpleGrid columns={{ base: 1, lg: 3, xl: 4, "2xl": 5 }} gap={4} p={20}>
+      <SimpleGrid
+        columns={{ base: 1, lg: 3, xl: 4, "2xl": 5 }}
+        gap={4}
+        px={{ base: 2, md: 10, lg: 20 }}
+        py={{ base: "10", md: "20" }}
+      >
         <Card>
           <CardBody>
             <Box fontSize="4xl" mb={4}>
@@ -119,16 +124,20 @@ const Homepage: React.FC = () => {
           </CardBody>
         </Card>
       </SimpleGrid>
-      <Heading px={20} mb={20}>
+      <Heading px={{ base: 2, md: 10, lg: 20 }} mb={20}>
         Popular coins
       </Heading>
-      <Box m="70px">
+      <Box m={{ base: "10px", md: "70px" }}>
         <CarouselForCurrencies />
       </Box>
-      <Heading px={20} mb={20}>
+      <Heading
+        px={{ base: 2, md: 10, lg: 20 }}
+        mb={20}
+        mt={{ base: "10", md: "0" }}
+      >
         Latest News
       </Heading>
-      <Box m="70px">
+      <Box m={{ base: "10px", md: "70px" }}>
         <CarouselForNews />
       </Box>
     </div>

@@ -36,10 +36,10 @@ const Cryptocurrencies = () => {
 
   return (
     <>
-      <Heading px={20} pt={10}>
+      <Heading px={{ base: 2, md: 10, lg: 20 }} pt={10}>
         All Crypto
       </Heading>
-      <InputGroup w={50 + "%"} ml="20" mt="10">
+      <InputGroup w={50 + "%"} ml={{ base: "0", md: "20" }} mt="10">
         <InputLeftElement pointerEvents="none" children={<AiOutlineSearch />} />
         <Input
           value={search}
@@ -50,7 +50,12 @@ const Cryptocurrencies = () => {
           bg="gray.300"
         />
       </InputGroup>
-      <SimpleGrid columns={{ xl: 4, lg: 2, base: 1 }} px={20} gap="7" py="10">
+      <SimpleGrid
+        columns={{ xl: 4, lg: 2, base: 1 }}
+        px={{ base: 2, md: 10, lg: 20 }}
+        gap="7"
+        py="10"
+      >
         {isFetching ? (
           <>Loading...</>
         ) : (
