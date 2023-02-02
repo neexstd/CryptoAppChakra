@@ -8,12 +8,8 @@ import {
   Text,
   Link,
   SimpleGrid,
-  InputGroup,
-  InputLeftElement,
-  Input,
 } from "@chakra-ui/react";
 import { Article } from "../types";
-import { NavLink } from "react-router-dom";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import moment from "moment";
 
@@ -40,7 +36,7 @@ const News = () => {
         {isFetching ? (
           <>Loading...</>
         ) : (
-          news.map((article: Article, index: number) => (
+          news?.map((article: Article, index: number) => (
             <Card maxW="sm" className="slick-slide" key={index}>
               <CardBody>
                 <Image

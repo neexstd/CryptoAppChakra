@@ -71,7 +71,7 @@ export default function CarouselForNews() {
   const [slider, setSlider] = useState<Slider | null>(null);
 
   const { data: cryptoNews, isFetching } =
-    useGetCryptoNewsQuery("Cryptocurrency");
+    useGetCryptoNewsQuery("cryptocurrency");
 
   const news = cryptoNews?.value;
 
@@ -110,7 +110,7 @@ export default function CarouselForNews() {
         {isFetching ? (
           <div>Loading...</div>
         ) : (
-          news.map((article: Article, index: number) => {
+          news?.map((article: Article, index: number) => {
             if (index > 10) return;
             return (
               <Card maxW="sm" className="slick-slide" key={index}>
